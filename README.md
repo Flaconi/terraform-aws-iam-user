@@ -17,7 +17,7 @@ Check the [examples](examples) directory.
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | name | Name of the IAM user | string | n/a | yes |
-| attach\_policy\_arns | Existing policy ARNs to attach to the IAM user | list | `[]` | no |
+| attach\_policy\_arns | Existing policy ARNs to attach to the IAM user | list(string) | `[]` | no |
 | custom\_policies | Custom policies to create and attach to the IAM user | list | `[]` | no |
 | enabled | Set to false to prevent the module from creating any resources | bool | `"true"` | no |
 | inline\_policies | Inline defined policies to attach to the IAM user | list | `[]` | no |
