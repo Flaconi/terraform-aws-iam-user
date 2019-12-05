@@ -25,6 +25,7 @@ variable "custom_policies" {
 
 variable "attach_policy_arns" {
   description = "Existing policy ARNs to attach to the IAM user"
+  type        = list(string)
   default     = []
 }
 
