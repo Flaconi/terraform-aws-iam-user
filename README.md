@@ -26,7 +26,7 @@ Check the [examples](examples) directory.
 | attach\_policy\_arns | Existing policy ARNs to attach to the IAM user | `list(string)` | `[]` | no |
 | custom\_policies | Custom policies to create and attach to the IAM user | `list` | `[]` | no |
 | enabled | Set to false to prevent the module from creating any resources | `bool` | `true` | no |
-| inline\_policies | Inline defined policies to attach to the IAM user | `list` | `[]` | no |
+| inline\_policies | Inline defined policies to attach to the IAM user | <code><pre>list(object({<br>    name = string<br>    statements = list(object({<br>      actions   = list(string)<br>      resources = list(string)<br>    }))<br>  }))<br></pre></code> | `[]` | no |
 | path | Path of the IAM user | `string` | `"/"` | no |
 | tags | Tags applied to all resources | `map(string)` | `{}` | no |
 
