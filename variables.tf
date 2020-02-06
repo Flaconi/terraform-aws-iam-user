@@ -16,6 +16,13 @@ variable "path" {
 variable "inline_policies" {
   description = "Inline defined policies to attach to the IAM user"
   default     = []
+  type = list(object({
+    name = string
+    statements = list(object({
+      actions   = list(string)
+      resources = list(string)
+    }))
+  }))
 }
 
 variable "custom_policies" {
