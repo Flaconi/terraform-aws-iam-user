@@ -9,7 +9,7 @@ TF_EXAMPLES     = $(sort $(dir $(wildcard $(CURRENT_DIR)examples/*/)))
 TF_MODULES      = $(sort $(dir $(wildcard $(CURRENT_DIR)modules/*/)))
 
 TF_VERSION      = light
-TF_DOCS_VERSION = 0.8.0-rc.2
+TF_DOCS_VERSION = 0.8.0
 
 # Adjust your delimiter here or overwrite via make arguments
 DELIM_START = <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
