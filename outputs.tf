@@ -17,4 +17,5 @@ output "this_aws_iam_access_key_id" {
 output "this_aws_iam_access_key_secret" {
   description = "The access key secret"
   value       = element(concat(aws_iam_access_key.this.*.secret, [""]), 0)
+  sensitive   = true
 }
