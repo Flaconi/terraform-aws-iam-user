@@ -12,21 +12,28 @@ Check the [examples](examples) directory.
 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12.26 |
+| aws | >= 3 |
+
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | n/a |
+| aws | >= 3 |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
-| name | Name of the IAM user | `any` | n/a | yes |
+|------|-------------|------|---------|:--------:|
+| name | Name of the IAM user | `string` | n/a | yes |
 | attach\_policy\_arns | Existing policy ARNs to attach to the IAM user | `list(string)` | `[]` | no |
-| custom\_policies | Custom policies to create and attach to the IAM user | `list` | `[]` | no |
+| custom\_policies | Custom policies to create and attach to the IAM user | <pre>list(object({<br>    name = string<br>    statements = list(object({<br>      actions   = list(string)<br>      resources = list(string)<br>    }))<br>  }))</pre> | `[]` | no |
 | enabled | Set to false to prevent the module from creating any resources | `bool` | `true` | no |
-| inline\_policies | Inline defined policies to attach to the IAM user | <pre>list(object({<br>    name = string<br>    statements = list(object({<br>      actions   = list(string)<br>      resources = list(string)<br>    }))<br>  }))<br></pre> | `[]` | no |
+| inline\_policies | Inline defined policies to attach to the IAM user | <pre>list(object({<br>    name = string<br>    statements = list(object({<br>      actions   = list(string)<br>      resources = list(string)<br>    }))<br>  }))</pre> | `[]` | no |
 | path | Path of the IAM user | `string` | `"/"` | no |
 | tags | Tags applied to all resources | `map(string)` | `{}` | no |
 
