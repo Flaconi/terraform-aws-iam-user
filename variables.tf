@@ -28,6 +28,13 @@ variable "inline_policies" {
 variable "custom_policies" {
   description = "Custom policies to create and attach to the IAM user"
   default     = []
+  type = list(object({
+    name = string
+    statements = list(object({
+      actions   = list(string)
+      resources = list(string)
+    }))
+  }))
 }
 
 variable "attach_policy_arns" {
