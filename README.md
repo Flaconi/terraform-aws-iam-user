@@ -1,6 +1,7 @@
 # AWS IAM User
 
-[![Build Status](https://travis-ci.com/Flaconi/terraform-aws-iam-user.svg?branch=master)](https://travis-ci.com/Flaconi/terraform-aws-iam-user)
+[![Lint Status](https://github.com/Flaconi/terraform-aws-iam-user/actions/workflows/linting.yml/badge.svg?branch=master)](https://github.com/Flaconi/terraform-aws-iam-user/actions/workflows/linting.yml)
+[![Docs Status](https://github.com/Flaconi/terraform-aws-iam-user/actions/workflows/terraform-docs.yml/badge.svg?branch=master)](https://github.com/Flaconi/terraform-aws-iam-user/actions/workflows/terraform-docs.yml)
 [![Tag](https://img.shields.io/github/tag/Flaconi/terraform-aws-iam-user.svg)](https://github.com/Flaconi/terraform-aws-iam-user/releases)
 [![license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
