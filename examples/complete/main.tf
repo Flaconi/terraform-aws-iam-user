@@ -7,7 +7,7 @@ module "terraform_iam_user" {
   name    = "testuser"
   enabled = true
 
-  tags                     = {}
+  tags = {}
 
   inline_policies    = var.inline_policies
   attach_policy_arns = ["arn:aws:iam::aws:policy/AmazonVPCReadOnlyAccess"]
