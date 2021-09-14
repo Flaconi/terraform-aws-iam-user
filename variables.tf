@@ -6,11 +6,13 @@ variable "enabled" {
 
 variable "name" {
   description = "Name of the IAM user"
+  type        = string
 }
 
 variable "path" {
   description = "Path of the IAM user"
   default     = "/"
+  type        = string
 }
 
 variable "inline_policies" {

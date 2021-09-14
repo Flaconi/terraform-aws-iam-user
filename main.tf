@@ -22,7 +22,7 @@ resource "aws_iam_access_key" "this" {
 data "aws_iam_policy_document" "this_inline" {
   count = var.enabled ? length(var.inline_policies) : 0
 
-  dynamic statement {
+  dynamic "statement" {
     for_each = var.inline_policies[count.index].statements
 
     content {
@@ -48,7 +48,7 @@ resource "aws_iam_user_policy" "this_inline" {
 data "aws_iam_policy_document" "this_custom" {
   count = var.enabled ? length(var.custom_policies) : 0
 
-  dynamic statement {
+  dynamic "statement" {
     for_each = var.custom_policies[count.index].statements
 
     content {
